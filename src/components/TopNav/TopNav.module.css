@@ -1,0 +1,27 @@
+.topnav{
+    width: 100%;
+    position: sticky;
+    top: 0; 
+    margin: 0 auto;
+    padding: var(--space-xs) var(--space-md);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--font-gray)
+}
+
+.logoContainer{
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.cta{
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .topnav{
+        width: 100%;
+    }
+}

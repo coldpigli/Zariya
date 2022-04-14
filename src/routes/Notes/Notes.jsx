@@ -2,7 +2,7 @@ import styles from "./Notes.module.css";
 
 const Notes = () => {
   return (
-    <div>Notes</div>
+    <div className={`generic-page`}>Notes</div>
   )
 }
 

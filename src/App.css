@@ -25,7 +25,7 @@
     --color-pop-3: #F29C36;
     --color-pop-4: #F57042;
     /* font family  */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lora', serif;
 }
 
 .App{
@@ -34,9 +34,6 @@
 
 ul{
     list-style: none;
-}
-.active{
-    color: var(--brand-color);
 }
 .dark-theme{
     background-color: var(--background-dark);
@@ -86,6 +83,12 @@ ul{
     color: var(--font-primary);
 }
 
+.generic-page{
+    margin-left: 5rem;
+    width: 100%;
+    min-height: 100vh;
+}
+
 html::-webkit-scrollbar {
     width: 5px; 
  }
@@ -97,4 +100,10 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background: var(--background-gray);
   border-radius: 25px;
+}
+
+@media only screen and (max-width: 600px){
+    .generic-page{
+        margin-left: 0;
+    }
 }

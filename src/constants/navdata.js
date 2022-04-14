@@ -1,9 +1,9 @@
 const navdata = [
     {
         id: 1,
-        title: "Folders",
-        icon: "folder",
-        nextUrl: "/folders"    
+        title: "Label",
+        icon: "label",
+        nextUrl: "/label"    
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ const navdata = [
     {
         id: 3,
         title: "Notes",
-        icon: "add_circle",
+        icon: "note_alt",
         nextUrl: "/"
     },
     {

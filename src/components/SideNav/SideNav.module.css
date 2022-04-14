@@ -6,8 +6,7 @@
     justify-content: flex-start;
     gap: 1.5rem;
     position: fixed;
-    transition: 200ms ease;
-    /* background-color: var(--background-dark); */
+    transition: 400ms ease;
 }
 
 .navItem{
@@ -25,24 +24,14 @@
 }
 
 :global .active {
-    color: var(--font-primary) !important;
     border-radius: var(--radius-sm);
-    background-color: var(--brand-color);
+    border: 1px solid;
 }
 
 @media only screen and (min-width: 600px){
     .sidenav{
     height: 100vh;
     width: 5rem;
-    }
-    .sidenav:hover{
-        width: 12rem;
-        align-items: flex-start;
-    }
-    
-    .sidenav:hover .navTitle{
-        display: block;
-        font-size: 1rem;
     }
 }
 

@@ -2,7 +2,7 @@ import styles from "./Trash.module.css";
 
 const Trash = () => {
   return (
-    <div>Trash</div>
+    <div className={`generic-page`}>Trash</div>
   )
 }
 
