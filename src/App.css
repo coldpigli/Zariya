@@ -12,6 +12,7 @@
     --background-light: #EEEEEE;
     --background-light-2: #DDDDDD;
     --background-darkGrey: #16171b;
+    --background-slate: #222222;
 
     /* pastels */
     --brand-color: #1c7d5e;
@@ -36,8 +37,8 @@ ul{
     list-style: none;
 }
 .dark-theme{
-    background-color: var(--background-dark);
-    color: var(--font-primary);
+    background-color: var(--background-slate);
+    color: var(--font-secondary);
 }
 
 .day-theme{
