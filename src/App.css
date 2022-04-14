@@ -1,51 +1,100 @@
-.App {
-  text-align: center;
+:root{
+
+    --font-primary: #FFFFFF;
+    --font-secondary: #CCCCCC;
+    --font-notes: #AAAAA1;
+    --font-gray: #747474;
+    --font-dark: #1b1b1b;
+
+    /* backgorund colors  */
+    --background-dark: #000000;
+    --background-gray: #1F2128;
+    --background-light: #EEEEEE;
+    --background-light-2: #DDDDDD;
+    --background-darkGrey: #16171b;
+
+    /* pastels */
+    --brand-color: #1c7d5e;
+    --pastel-blue: #688DE2;
+    --pastel-indigo: #726CF2;
+    --pastel-green: #5BB68B;
+    --pastel-red: #DA714F;
+    --pastel-yellow: #E6C142;
+    --color-pop-1: #639EF5;
+    --color-pop-2: #716EF5;
+    --color-pop-3: #F29C36;
+    --color-pop-4: #F57042;
+    /* font family  */
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul{
+    list-style: none;
+}
+.active{
+    color: var(--brand-color);
+}
+.dark-theme{
+    background-color: var(--background-dark);
+    color: var(--font-primary);
 }
 
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
+.day-theme{
+    background-color: var(--background-light);
+    color: var(--font-dark);
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
 }
 
-.App-link {
-  color: #61dafb;
+.brand-color{
+    color: var(--pastel-green);
 }
 
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
+.heading1{
+    font-size: 2.25rem;
 }
 
-.brand-title span {
-  color: #ffde59;
+.heading2{
+    font-size: 1.526rem;
 }
 
-.brand-description {
-  font-size: 1.4rem;
+.heading3{
+    font-size: 1.25rem;
 }
 
-.links {
-  display: flex;
+.paragraph1{
+    font-size: 1.125rem;
 }
 
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
+.paragraph2{
+    font-size: 0.875rem;
+}
+
+.dark-font{
+    color: var(--background-dark);
+}
+
+.day-font{
+    color: var(--font-primary);
+}
+
+html::-webkit-scrollbar {
+    width: 5px; 
+ }
+
+html::-webkit-scrollbar-track {
+  background-color: var(--background-dark);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--background-gray);
+  border-radius: 25px;
 }
