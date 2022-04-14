@@ -10,5 +10,4 @@ const ThemeProvider = ({children}) => {
                 {children}
            </ThemeContext.Provider>
 }
-
 export {useTheme, ThemeProvider};

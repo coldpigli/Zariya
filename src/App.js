@@ -1,3 +1,5 @@
+import { SideNav } from "components";
+import { RoutingConfings } from "configs";
 import { useTheme } from "contexts";
 import "./App.css";
 
@@ -5,7 +7,8 @@ function App() {
   const {theme} = useTheme();
   return (
     <div className={`App ${theme}`}>
-      <h1>We make it happen</h1>
+      <SideNav/>
+      <RoutingConfings/>
     </div>
   );
 }
