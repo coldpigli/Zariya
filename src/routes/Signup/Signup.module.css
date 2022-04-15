@@ -1,0 +1,37 @@
+.signupPage{
+    padding: 0 1rem 6rem 1rem;
+}
+.headerSection{
+    margin-left: 30%;
+}
+
+.inputBox{
+    max-width: 22rem;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    border: none;
+    outline: 1px solid;
+    background-color: var(--background-light);
+}
+
+.signupForm{
+    margin-left: 30%;
+}
+
+.loginCta{
+    margin-top: 2rem;
+}
+
+.loginBtn{
+    width: 22rem;
+}
+
+@media only screen and (max-width: 600px){
+    .headerSection{
+        margin-left: 0;
+    }
+    .signupForm{
+        margin-left: 0;
+    }
+}
