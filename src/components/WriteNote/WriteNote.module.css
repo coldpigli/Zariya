@@ -1,0 +1,43 @@
+.noteContainer{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.notepad{
+    width: 80%;
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    background-color: red;
+    height: 100%;
+}
+
+.close{
+    position:absolute;
+    top: 18px;
+    right: 18px;
+    max-height: 0;
+}
+
+.close span{
+    font-size: 2rem;
+}
+
+.noteShow{
+    visibility: visible;
+}
+
+.noteHide{
+    visibility: hidden;
+}
+
+
+@media only screen and (max-width: 600px){
+    .notepad{
+        width: 100%;
+    }
+}
