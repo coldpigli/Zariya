@@ -37,7 +37,7 @@ ul{
     list-style: none;
 }
 .dark-theme{
-    background-color: var(--background-slate);
+    background-color: var(--background-dark);
     color: var(--font-secondary);
 }
 
@@ -45,6 +45,37 @@ ul{
     background-color: var(--background-light);
     color: var(--font-dark);
 }
+
+.dark-fill{
+    background-color: var(--font-dark);
+    color: var(--font-secondary);
+    border: none;
+}
+
+.light-fill{
+    background-color: var(--font-secondary);
+    color: var(--font-dark);
+    border: none;
+}
+
+.mono-btn{
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.outline-btn-day{
+    background-color: transparent;
+    color: var(--background-dark);
+    border: 1px solid var(--background-dark);
+}
+
+
+.outline-btn-dark{
+    background-color: transparent;
+    border: 1px solid var(--background-light);
+    color: var(--background-light);
+}
+
 .hide{
     display: none;
 }
@@ -52,15 +83,38 @@ ul{
     display: block;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
+.btn-primary-outline{
+    color: inherit;
+    border-color: inherit;
+}
+
+.btn-primary-outline:hover{
+    color: inherit;
+    background-color: transparent;
+    border-color: inherit;
+}
+
 .brand-color{
     color: var(--pastel-green);
 }
 
 .heading1{
-    font-size: 2.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 3.25rem;
+}
+
+.heading-large{
+    font-weight: 800;
+    font-size: 3.25rem;
 }
 
 .heading2{
+    font-family: 'Montserrat', sans-serif; 
     font-size: 1.526rem;
 }
 
@@ -88,6 +142,10 @@ ul{
     margin-left: 5rem;
     width: 100%;
     min-height: 100vh;
+}
+
+.btn:hover{
+    background-color: inherit;
 }
 
 html::-webkit-scrollbar {

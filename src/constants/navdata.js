@@ -15,7 +15,7 @@ const navdata = [
         id: 3,
         title: "Notes",
         icon: "note_alt",
-        nextUrl: "/"
+        nextUrl: "/notes"
     },
     {
         id: 4,

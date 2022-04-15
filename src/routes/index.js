@@ -5,6 +5,7 @@ import Notes from "./Notes/Notes";
 import Trash from "./Trash/Trash";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
+import Landing from "./Landing/Landing";
 
 export {
     Archive,
@@ -13,5 +14,6 @@ export {
     Notes,
     Trash,
     Login,
-    Signup
+    Signup,
+    Landing
 }
