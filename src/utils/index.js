@@ -1,8 +1,9 @@
-import { handleLogin,validateInputs } from "./handleAuth";
+import { handleLogin,validateInputs, handleSignup } from "./handleAuth";
 import toast from "./toast";
 
 export {
     handleLogin,
+    handleSignup,
     validateInputs,
     toast
 }

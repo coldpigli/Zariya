@@ -1,5 +1,5 @@
 import { useTheme, useUserDetails } from "contexts";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Login.module.css";
 import { handleLogin, toast } from "utils";
@@ -66,7 +66,7 @@ const Login = () => {
             <div className={`pointer`} onClick={loginGuest}>Login with Guest Credentials?</div>
             <div className={`${styles.loginCta} gap-u30 flex-vertical`}>
               <button className={`mono-btn ${styles.loginBtn} ${theme==="day-theme"?"dark-fill":"day-fill"} gap-d20`} onClick={loginHandler}>Login</button>
-              <button className={`mono-btn ${styles.loginBtn} ${theme==="day-theme"?"dark-fill outline-btn-day":"day-fill outline-btn-dark"}`}>New User? Signup</button>
+              <button className={`mono-btn ${styles.loginBtn} ${theme==="day-theme"?"dark-fill outline-btn-day":"day-fill outline-btn-dark"}`} onClick={()=>navigate("/signup")}>New User? Signup</button>
             </div>
         </form>
     </div>

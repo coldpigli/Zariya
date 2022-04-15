@@ -35,7 +35,32 @@ const handleLogin = async(loginData) => {
     }
 }
 
+const handleSignup = async(signupData) => {
+  if(validateInputs(signupData.email,signupData.password)){
+      try{
+        const response = await axios.post("/api/auth/signup", signupData);
+        if(response.status===200 || response.status===201){
+          const {createdUser,encodedToken} = response.data;
+          localStorage.setItem("authToken",encodedToken)
+          toast({type: "success", message: "Sinup Successful"})
+          return createdUser;
+        }else{
+          toast({type: "error", message: "Singup Failed"})
+          return false
+        }
+      }catch(err){
+        console.log(err);  
+        toast({type: "error", message: "Singup Failed"})
+        return false
+      }  
+  }
+  else{
+      toast({type: "error", message: "Please check email or password"})
+      return false
+  }
+}
+
 
 export{
-    validateInputs, handleLogin
+    validateInputs, handleLogin, handleSignup
 }
