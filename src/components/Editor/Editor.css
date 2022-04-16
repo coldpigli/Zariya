@@ -1,0 +1,97 @@
+/* Quill Input */
+.ql-container {
+    background-color: inherit;
+  }
+  
+  .ql-container.ql-snow {
+    font-family: inherit;
+    border: none !important;
+    font-size: 1.2rem;
+  }
+  
+  .ql-toolbar.ql-snow {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    overflow-y: hidden;
+    border: none !important;
+    justify-content: center;
+  }
+  
+  /* Entire Parent Quill */
+  .quill {
+    background-color: inherit;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-self: center;
+    flex-direction: column;
+  }
+  /* Second Parent */
+  .ql-snow {
+    background-color: inherit;
+  }
+  
+  /* Quill Toolbar */
+  .ql-toolbar {
+    background-color: inherit;
+    width: 100%;
+    display: flex;
+  }
+  
+  .ql-toolbar.ql-snow .ql-formats {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-right: 0 !important;
+  }
+
+  .ql-editor{
+    height: 75vh;
+    overflow-y: auto;
+    color: black;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+  }
+
+  .ql-editor::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .ql-snow.ql-toolbar button{
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+
+  .ql-formats{
+    gap: 1rem;
+  }
+  
+  /* Tools on Active */
+  .ql-toolbar button.ql-active {
+    background-color: inherit;
+    border-radius: 50px;
+  }
+  
+  .ql-toolbar button .ql-fill {
+    fill: black;
+  }
+  
+  /* Button ka color */
+  .ql-toolbar button .ql-stroke {
+    stroke: black;
+  }
+  
+  /* Dropdown name color */
+  .ql-picker-label {
+    color: black;
+  }
+  
+  .ql-picker-label:hover {
+    color: black;
+  }
+  /* Drop down ka icons */
+  .ql-picker-label .ql-stroke {
+    stroke: black;
+  }

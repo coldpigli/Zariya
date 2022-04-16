@@ -1,0 +1,15 @@
+.toolbar{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ctaSection{
+    gap: 1rem;
+}
+
+
+@media only screen and (max-width: 600px){
+    .ctaText{
+        display: none;
+    }
+}

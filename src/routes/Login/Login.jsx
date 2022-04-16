@@ -1,8 +1,8 @@
 import { useTheme, useUserDetails } from "contexts";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Login.module.css";
-import { handleLogin, toast } from "utils";
+import { handleLogin } from "utils";
 
 const Login = () => {
 
