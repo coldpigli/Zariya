@@ -9,7 +9,7 @@ const NotesToolbar = () => {
     <div className={`${styles.toolbar} flex`}>
           <h2>All Notes</h2>
           <div className={`flex ${styles.ctaSection}`}>
-            <div className={`${styles.toolbarCta} children-centered pointer`} onClick={()=>dispatchNote({type:"TOGGLE_WRITE"})}>
+            <div className={`${styles.toolbarCta} children-centered pointer`} onClick={()=>dispatchNote({type:"NEW_NOTE"})}>
               <span className="material-icons md-24">add</span>
               <span className={`${styles.ctaText}`}>Add new</span>
             </div>

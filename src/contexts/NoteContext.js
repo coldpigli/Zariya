@@ -9,8 +9,13 @@ const NoteProvider = ({children}) => {
 
     const [noteState, dispatchNote] = useReducer(noteReducer, {
         isOpen: false,
-        title: "",
-        content: ""
+        noteData: {
+            title: "",
+            content: "",
+            color: "",
+            label: [],
+            priority: ""
+        }
     })
 
     return <NoteContext.Provider value={{noteState, dispatchNote}}>

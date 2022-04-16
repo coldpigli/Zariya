@@ -5,7 +5,7 @@ const Notes = () => {
   return (
     <div className={`generic-page ${styles.notePage}`}>
       <NotesToolbar/>
-      <WriteNote/>
+      <WriteNote />
     </div>
   )
 }
