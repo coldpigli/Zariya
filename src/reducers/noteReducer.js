@@ -10,7 +10,7 @@ const noteReducer = (state, action) => {
           title: "",
           content: "",
           color: "",
-          label: [],
+          label: "",
           priority: "",
         },
       };
@@ -38,6 +38,15 @@ const noteReducer = (state, action) => {
           content: action.payload,
         },
       };
+
+    case "CHANGE_COLOR":
+      return {
+        ...state,
+        noteData:{
+          ...state.noteData,
+          color: action.payload
+        }
+      }
       
     default:
       return state;

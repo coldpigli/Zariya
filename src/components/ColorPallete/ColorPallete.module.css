@@ -1,0 +1,18 @@
+.palleteContainer{
+    background-color: var(--font-primary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 15rem;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.roundColor{
+    cursor: pointer;
+    border-radius: var(--radius-round);
+    border: 1px solid var(--background-dark);
+    width: 24px;
+    height: 24px;
+}

@@ -1,15 +1,25 @@
-import { Editor } from "components";
-import { useNote } from "contexts";
+import { ColorPallete, Editor, LabelPallete, PriorityPallete } from "components";
+import { useNote, useUserDetails } from "contexts";
 import styles from "./WriteNote.module.css";
+import 'tippy.js/animations/scale-subtle.css';
+import Tippy from '@tippyjs/react';
+import { addNote } from "utils";
 
 const WriteNote = () => {
 
     const {noteState, dispatchNote} = useNote();
     const {isOpen, noteData} = noteState;
+    const {userState, dispatchUser} = useUserDetails();
+    console.log(userState);
+
+    const handleNote = () => {
+        addNote(noteData, dispatchUser);
+        dispatchNote({type: "CLOSE_EDITOR"})
+    }
 
   return (
     <div className={`${styles.noteContainer} ${isOpen? styles.noteShow: styles.noteHide}`}>
-        <div className={`${styles.notepad} bod1`}>
+        <div className={`${styles.notepad}`} style={{backgroundColor: noteData.color}}>
             <div className={`${styles.close} pointer`} onClick={()=>dispatchNote({type:"CLOSE_EDITOR"})}>
                 <span className={`material-icons md-24`}>close</span>
             </div>
@@ -24,20 +34,20 @@ const WriteNote = () => {
             <div>
               <Editor/>
             </div>
-            <div className={`${styles.bottomToolbar}`}>
-              <div>
+            <div className={`${styles.bottomToolbar}`} style={{backgroundColor: noteData.color}}>
+              <Tippy content={<ColorPallete/>} interactive={true} arrow={true} animation="scale-subtle">
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>palette</span>
-              </div>
-              <div>
+              </Tippy>
+              <Tippy content={<LabelPallete/>} interactive={true} arrow={true} animation="scale-subtle">
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>label</span>
-              </div>
-              <div>
+              </Tippy>
+              <Tippy content={<PriorityPallete/>} interactive={true} arrow={true} animation="scale-subtle">
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>report</span>
-              </div>
+              </Tippy>
               <div>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>delete_forever</span>
               </div>
-              <div>
+              <div onClick={handleNote}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>check</span>
               </div>
           </div>

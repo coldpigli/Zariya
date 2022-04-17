@@ -16,6 +16,11 @@ const userReducer = (state, action) => {
                 archives: [],
                 notes: []
             }
+        case "UPDATE_NOTES":
+            return{
+                ...state,
+                notes: action.payload
+            }
         default:
            return state;
     }

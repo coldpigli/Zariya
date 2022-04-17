@@ -1,0 +1,17 @@
+.palleteContainer{
+    background-color: var(--font-primary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 15rem;
+    color: black;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.labelOption{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
