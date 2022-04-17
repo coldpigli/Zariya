@@ -1,5 +1,11 @@
 import navdata from "./navdata";
+import palleteColors from "./palleteColors";
+import labelOptions from "./labelOptions";
+import priorityOptions from "./priority";
 
 export{
-    navdata
+    navdata,
+    palleteColors,
+    labelOptions,
+    priorityOptions
 }

@@ -13,7 +13,7 @@ const NoteProvider = ({children}) => {
             title: "",
             content: "",
             color: "",
-            label: [],
+            label: "",
             priority: ""
         }
     })
