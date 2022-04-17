@@ -1,0 +1,30 @@
+.noteContainer{
+    width: 15rem;
+    height: 15rem;
+    padding: 0.2rem var(--space-xs);
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+.noteTitle{
+    font-size: 1.2rem;
+    
+}
+
+.noteContainer:hover{
+    transform: scale(1.02);
+}
+
+.snippet{
+    height: 60%;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 600px){
+    .noteContainer{
+        width: 11rem;
+        height: 11rem;
+    }
+}

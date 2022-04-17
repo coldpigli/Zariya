@@ -6,6 +6,8 @@ import Editor from "./Editor/Editor";
 import ColorPallete from "./ColorPallete/ColorPallete";
 import LabelPallete from "./LabelPallete/LabelPallete";
 import PriorityPallete from "./PriorityPallete/PriorityPallete";
+import NoteListing from "./NoteListing/NoteListing";
+import NoteCard from "./NoteCard/NoteCard";
 
 export{
     SideNav,
@@ -15,5 +17,7 @@ export{
     Editor,
     ColorPallete,
     LabelPallete,
-    PriorityPallete
+    PriorityPallete,
+    NoteListing,
+    NoteCard
 }
