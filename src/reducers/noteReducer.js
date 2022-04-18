@@ -9,9 +9,10 @@ const noteReducer = (state, action) => {
           ...state.noteData,
           title: "",
           content: "",
-          color: "",
+          color: "#FFED7D",
           label: "",
           priority: "",
+          date: new Date().toLocaleString()
         },
       };
 
