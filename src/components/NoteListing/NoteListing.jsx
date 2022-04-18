@@ -6,7 +6,7 @@ const NoteListing = () => {
 
     const {userState} = useUserDetails();
     const {notes} = userState
-
+    
   return (
     <div className={`${styles.noteList} flex`}>
         {

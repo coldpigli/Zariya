@@ -9,6 +9,7 @@ const NoteProvider = ({children}) => {
 
     const [noteState, dispatchNote] = useReducer(noteReducer, {
         isOpen: false,
+        isEdit: false,
         noteData: {
             title: "",
             content: "",

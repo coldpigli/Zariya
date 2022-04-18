@@ -15,11 +15,29 @@ const noteReducer = (state, action) => {
           date: new Date().toLocaleString()
         },
       };
+    
+    case "EDIT_NOTE":
+      return{
+        ...state.noteData,
+        isOpen: true,
+        isEdit: true,
+        noteData: {
+          ...state.noteData,
+          _id: action.payload._id,
+          title: action.payload.title,
+          content: action.payload.content,
+          color: action.payload.color,
+          label: action.payload.label,
+          priority: action.payload.priority,
+          date: new Date().toLocaleString()
+        }
+      }
 
     case "CLOSE_EDITOR":
       return {
         ...state,
         isOpen: false,
+        isEdit: false
       };
 
     case "UPDATE_NOTE":
