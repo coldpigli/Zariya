@@ -3,7 +3,7 @@ import { useNote, useUserDetails } from "contexts";
 import styles from "./WriteNote.module.css";
 import 'tippy.js/animations/scale-subtle.css';
 import Tippy from '@tippyjs/react';
-import { addNote, editNote } from "utils";
+import { addNote, deleteNote, editNote } from "utils";
 
 const WriteNote = () => {
 

@@ -38,7 +38,27 @@ const editNote = async (noteData, dispatch) => {
     } 
 }
 
+const deleteNote = async(noteData, dispatch) => {
+  try{
+    const res = await axios.delete(`/api/notes/${noteData._id}`,{
+        headers: {
+          authorization: localStorage.getItem("authToken"),
+        },
+      });
+      if (res.status === 200 || res.status === 201) {
+        const { notes } = res.data;
+        console.log(notes);
+        toast({ type: "success", message: "Deleted Note" });
+        dispatch({type: "UPDATE_NOTES", payload: notes})
+      }
+    } catch (err){
+        console.log("Something bad happened", err);
+        toast({ type: "error", message: "Couldn't complete request" });
+    } 
+}
+
 export {
     addNote,
-    editNote
+    editNote,
+    deleteNote
 }

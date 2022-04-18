@@ -1,10 +1,13 @@
 import styles from "./NoteCard.module.css";
 import DOMPurify from "dompurify";
-import { useNote } from "contexts";
+import { useNote, useUserDetails } from "contexts";
+import { deleteNote } from "utils";
 
 const NoteCard = ({note}) => {
 
-  const {dispatchNote} = useNote();
+  const {noteState, dispatchNote} = useNote();
+  const {noteData} = noteState;
+  const {dispatchUser} = useUserDetails();
 
   const editNote = () => {
       dispatchNote({type: "EDIT_NOTE", payload: note})
@@ -33,7 +36,7 @@ const NoteCard = ({note}) => {
               <div>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>archive</span>
               </div>
-              <div>
+              <div onClick={()=>deleteNote(noteData, dispatchUser)}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>delete_forever</span>
               </div>
           </div>
