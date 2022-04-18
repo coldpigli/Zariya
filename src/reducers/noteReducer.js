@@ -12,6 +12,7 @@ const noteReducer = (state, action) => {
           color: "#FFED7D",
           label: "",
           priority: "",
+          date: new Date().toLocaleString()
         },
       };
 

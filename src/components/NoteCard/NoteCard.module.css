@@ -4,6 +4,7 @@
     padding: 0.2rem var(--space-xs);
     cursor: pointer;
     transition: 200ms ease;
+    justify-content: space-between;
 }
 
 .noteTitle{
@@ -17,8 +18,20 @@
     transform: scale(1.02);
 }
 
+.bottomData{
+    justify-content: space-between;
+}
+
+.dateTime{
+    color: rgb(83, 79, 79)
+}
+
+.cta{
+    gap: 0.3rem;
+}
+
 .snippet{
-    height: 60%;
+    height: 59%;
     -webkit-line-clamp: 4;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -28,5 +41,12 @@
     .noteContainer{
         width: 11rem;
         height: 11rem;
+    }
+    .dateTime{
+        display: none;
+    }
+    .cta{
+        width: 100%;
+        justify-content: space-around;
     }
 }
