@@ -9,6 +9,8 @@ import PriorityPallete from "./PriorityPallete/PriorityPallete";
 import NoteListing from "./NoteListing/NoteListing";
 import NoteCard from "./NoteCard/NoteCard";
 import PinnedNotes from "./PinnedNotes/PinnedNotes";
+import SortingHat from "./SortingHat/SortingHat";
+import FilterBy from "./FilterBy/FilterBy";
 
 export{
     SideNav,
@@ -21,5 +23,7 @@ export{
     PriorityPallete,
     NoteListing,
     NoteCard,
-    PinnedNotes
+    PinnedNotes,
+    SortingHat,
+    FilterBy
 }
