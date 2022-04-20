@@ -1,12 +1,11 @@
 import styles from "./NoteCard.module.css";
 import DOMPurify from "dompurify";
 import { useNote, useUserDetails } from "contexts";
-import { archiveNote, deleteNote, editNote, toast } from "utils";
+import { archiveNote, deleteNote, toast } from "utils";
 
 const NoteCard = ({note}) => {
 
-  const {noteState, dispatchNote} = useNote();
-  const {noteData} = noteState;
+  const {dispatchNote} = useNote();
   const {userState, dispatchUser} = useUserDetails();
   const {pinnedNotes} = userState;
  
@@ -36,14 +35,16 @@ const NoteCard = ({note}) => {
               })
               }
           </div>
-          <div className={`${styles.cta} flex`}>
+          <div className={`${styles.noteActions} flex`}>
               <div onClick={pinNote}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>push_pin</span>
               </div>
               <div onClick={()=>archiveNote(note, dispatchUser)}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>archive</span>
               </div>
-              <div onClick={()=>deleteNote(note, dispatchUser)}>
+              <div onClick={()=>{
+                dispatchUser({type: "UPDATE_TRASH", payload: note})
+                deleteNote(note, dispatchUser)}}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>delete_forever</span>
               </div>
           </div>

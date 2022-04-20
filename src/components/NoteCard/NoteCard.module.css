@@ -26,7 +26,7 @@
     color: rgb(83, 79, 79)
 }
 
-.cta{
+.noteActions{
     gap: 0.3rem;
 }
 
@@ -45,7 +45,7 @@
     .dateTime{
         display: none;
     }
-    .cta{
+    .noteActions{
         width: 100%;
         justify-content: space-around;
     }
