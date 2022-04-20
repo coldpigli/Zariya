@@ -8,6 +8,7 @@ import LabelPallete from "./LabelPallete/LabelPallete";
 import PriorityPallete from "./PriorityPallete/PriorityPallete";
 import NoteListing from "./NoteListing/NoteListing";
 import NoteCard from "./NoteCard/NoteCard";
+import PinnedNotes from "./PinnedNotes/PinnedNotes";
 
 export{
     SideNav,
@@ -19,5 +20,6 @@ export{
     LabelPallete,
     PriorityPallete,
     NoteListing,
-    NoteCard
+    NoteCard,
+    PinnedNotes
 }

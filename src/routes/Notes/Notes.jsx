@@ -1,7 +1,10 @@
 import styles from "./Notes.module.css";
-import { NoteListing, NotesToolbar, WriteNote } from "components";
+import { NoteListing, NotesToolbar, PinnedNotes, WriteNote } from "components";
+import { useUserDetails } from "contexts";
 
 const Notes = () => {
+  const {userState} = useUserDetails();
+  const {pinnedNotes} = userState;
   return (
     <div className={`generic-page ${styles.notePage}`}>
       <NotesToolbar/>

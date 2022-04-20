@@ -11,12 +11,14 @@ const [userState, dispatchUser] = useReducer(userReducer, {
     isLoggedIn: false,
     firstName: "",
     archives: [],
-    notes: []
+    notes: [],
+    pinnedNotes: [],
+    trash: []
 })
 
   return <UserContext.Provider value={{userState, dispatchUser}}>
-      {children}
-      </UserContext.Provider>;
+            {children}
+         </UserContext.Provider>
 };
 
 export { UserProvider, useUserDetails };

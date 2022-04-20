@@ -1,0 +1,5 @@
+.pinnedNotes{
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}

@@ -14,12 +14,24 @@ const userReducer = (state, action) => {
                 isLoggedIn: false,
                 firstName: "",
                 archives: [],
-                notes: []
+                notes: [],
+                pinnedNotes: []
             }
         case "UPDATE_NOTES":
             return{
                 ...state,
                 notes: action.payload
+            }
+        case "UPDATE_ARCHIVE":
+            return{
+                ...state,
+                archives: action.payload
+            }
+        case "ADD_PINNED_NOTE":
+            return{
+                ...state,
+                pinnedNotes: [...state.pinnedNotes, action.payload],
+                notes: state.notes.filter((item)=>item._id!==action.payload._id)
             }
         default:
            return state;

@@ -6,7 +6,7 @@ const NotesToolbar = () => {
     const {dispatchNote} = useNote();
     
   return (
-    <div className={`${styles.toolbar} flex`}>
+    <div className={`${styles.toolbar} flex gap-d30`}>
           <h2>All Notes</h2>
           <div className={`flex ${styles.ctaSection}`}>
             <div className={`${styles.toolbarCta} children-centered pointer`} onClick={()=>dispatchNote({type:"NEW_NOTE"})}>

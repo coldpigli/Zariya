@@ -3,17 +3,16 @@ import { useNote, useUserDetails } from "contexts";
 import styles from "./WriteNote.module.css";
 import 'tippy.js/animations/scale-subtle.css';
 import Tippy from '@tippyjs/react';
-import { addNote } from "utils";
+import { addNote, deleteNote, editNote } from "utils";
 
 const WriteNote = () => {
 
     const {noteState, dispatchNote} = useNote();
-    const {isOpen, noteData} = noteState;
+    const {isOpen, isEdit, noteData} = noteState;
     const {userState, dispatchUser} = useUserDetails();
-    console.log(userState);
-
+  
     const handleNote = () => {
-        addNote(noteData, dispatchUser);
+        isEdit ? editNote(noteData,dispatchUser):addNote(noteData, dispatchUser);
         dispatchNote({type: "CLOSE_EDITOR"})
     }
 
