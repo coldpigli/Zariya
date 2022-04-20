@@ -1,13 +1,14 @@
-import { useNote } from "contexts";
+import { useNote, useUserDetails } from "contexts";
 import styles from "./NotesToolbar.module.css";
 
 const NotesToolbar = () => {
 
     const {dispatchNote} = useNote();
+    const {userState} = useUserDetails();
     
   return (
     <div className={`${styles.toolbar} flex gap-d30`}>
-          <h2>All Notes</h2>
+          <h2>Welcome, {userState.firstName}</h2>
           <div className={`flex ${styles.ctaSection}`}>
             <div className={`${styles.toolbarCta} children-centered pointer`} onClick={()=>dispatchNote({type:"NEW_NOTE"})}>
               <span className="material-icons md-24">add</span>

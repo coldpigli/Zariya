@@ -42,7 +42,7 @@ ul{
 }
 
 .day-theme{
-    background-color: var(--background-light);
+    background-color: var(--font-primary);
     color: var(--font-dark);
 }
 

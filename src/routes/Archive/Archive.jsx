@@ -1,15 +1,16 @@
 import DOMPurify from "dompurify";
 import { useUserDetails } from "contexts";
 import styles from "./Archive.module.css";
-import { unarchiveNote } from "utils";
+import { deleteNote, unarchiveNote } from "utils";
 
 const Archive = () => {
   const {userState, dispatchUser} = useUserDetails();
   const {archives} = userState;
-  console.log(archives);
+
   return (
     <div className={`generic-page`}>
       <h1 className={`gap-d30`}>Archived Notes</h1>
+      <div className={`${styles.noteList} flex`}>
       {
         archives?.map((note)=>{
           return <div className={`${styles.noteContainer} flex-vertical`} style={{backgroundColor: note.color, color: "black"}}>
@@ -30,14 +31,12 @@ const Archive = () => {
                 <div onClick={()=>unarchiveNote(note, dispatchUser)}>
                   <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>unarchive</span>
                 </div>
-                <div>
-                  <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>delete_forever</span>
-                </div>
             </div>
           </div>
       </div>
         })
       }
+      </div>  
     </div>
   )
 }

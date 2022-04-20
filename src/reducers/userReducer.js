@@ -15,12 +15,23 @@ const userReducer = (state, action) => {
                 firstName: "",
                 archives: [],
                 notes: [],
-                pinnedNotes: []
+                pinnedNotes: [],
+                trash: []
             }
         case "UPDATE_NOTES":
             return{
                 ...state,
                 notes: action.payload
+            }
+        case "UPDATE_TRASH":
+            return{
+                ...state,
+                trash: [...state.trash, action.payload]
+            }
+        case "DELETE_FOREVER":
+            return{
+                ...state,
+                trash: action.payload
             }
         case "UPDATE_ARCHIVE":
             return{

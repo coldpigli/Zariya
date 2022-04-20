@@ -6,6 +6,12 @@
     transition: 200ms ease;
     justify-content: space-between;
 }
+.noteList{
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 
 .noteTitle{
     font-size: 1.2rem;
@@ -48,5 +54,9 @@
     .cta{
         width: 100%;
         justify-content: space-around;
+    }
+    .noteList{
+        justify-content: center;
+        gap: 1rem;
     }
 }
