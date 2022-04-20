@@ -10,9 +10,8 @@ const WriteNote = () => {
     const {noteState, dispatchNote} = useNote();
     const {isOpen, isEdit, noteData} = noteState;
     const {userState, dispatchUser} = useUserDetails();
-
+  
     const handleNote = () => {
-        console.log(noteData);
         isEdit ? editNote(noteData,dispatchUser):addNote(noteData, dispatchUser);
         dispatchNote({type: "CLOSE_EDITOR"})
     }

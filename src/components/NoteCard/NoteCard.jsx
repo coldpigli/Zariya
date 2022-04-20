@@ -1,16 +1,23 @@
 import styles from "./NoteCard.module.css";
 import DOMPurify from "dompurify";
 import { useNote, useUserDetails } from "contexts";
-import { deleteNote } from "utils";
+import { archiveNote, deleteNote, editNote, toast } from "utils";
 
 const NoteCard = ({note}) => {
 
   const {noteState, dispatchNote} = useNote();
   const {noteData} = noteState;
-  const {dispatchUser} = useUserDetails();
-
-  const editNote = () => {
+  const {userState, dispatchUser} = useUserDetails();
+  const {pinnedNotes} = userState;
+ 
+  const editNoteData = () => {
       dispatchNote({type: "EDIT_NOTE", payload: note})
+  }
+
+  const pinNote = () => {
+      pinnedNotes.find(item=>item._id===note._id) ? 
+      toast({type: "error", message: "Note already pinned"}) : 
+      dispatchUser({type: "ADD_PINNED_NOTE", payload: note})
   }
 
   return (
@@ -18,7 +25,7 @@ const NoteCard = ({note}) => {
         <h2 className={`${styles.noteTitle}`}>{note.title}</h2>
         <div className={`${styles.snippet}`} 
         dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(note.content)}}
-        onClick={editNote}></div>
+        onClick={editNoteData}></div>
         <div className={`${styles.bottomData} flex`}>
           <div className={`${styles.dateTime}`}>
               {
@@ -30,13 +37,13 @@ const NoteCard = ({note}) => {
               }
           </div>
           <div className={`${styles.cta} flex`}>
-              <div>
+              <div onClick={pinNote}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>push_pin</span>
               </div>
-              <div>
+              <div onClick={()=>archiveNote(note, dispatchUser)}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>archive</span>
               </div>
-              <div onClick={()=>deleteNote(noteData, dispatchUser)}>
+              <div onClick={()=>deleteNote(note, dispatchUser)}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>delete_forever</span>
               </div>
           </div>

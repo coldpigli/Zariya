@@ -18,7 +18,7 @@ const noteReducer = (state, action) => {
     
     case "EDIT_NOTE":
       return{
-        ...state.noteData,
+        ...state,
         isOpen: true,
         isEdit: true,
         noteData: {
@@ -32,7 +32,7 @@ const noteReducer = (state, action) => {
           date: new Date().toLocaleString()
         }
       }
-
+    
     case "CLOSE_EDITOR":
       return {
         ...state,
@@ -48,7 +48,7 @@ const noteReducer = (state, action) => {
           [action.payload.name]: action.payload.value,
         },
       };
-
+  
     case "UPDATE_NOTE_CONTENT":
       return {
         ...state,
@@ -65,9 +65,9 @@ const noteReducer = (state, action) => {
           ...state.noteData,
           color: action.payload
         }
-      }
-      
-    default:
+      } 
+
+     default:
       return state;
   }
 };

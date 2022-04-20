@@ -1,6 +1,6 @@
 import { handleLogin,validateInputs, handleSignup } from "./handleAuth";
 import toast from "./toast";
-import { addNote, editNote, deleteNote } from "./handleNote";
+import { addNote, editNote, deleteNote, archiveNote, unarchiveNote } from "./handleNote";
 
 export {
     handleLogin,
@@ -10,4 +10,6 @@ export {
     editNote,
     deleteNote,
     toast,
+    archiveNote,
+    unarchiveNote
 }
