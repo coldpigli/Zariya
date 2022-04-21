@@ -1,19 +1,19 @@
 const labelOptions = [
     {
         id: 1,
-        value: "Thoughts"
+        value: "thoughts"
     },
     {
         id: 2,
-        value: "Shopping"
+        value: "shopping"
     },
     {
         id: 3,
-        value: "Work"
+        value: "work"
     },
     {
         id: 4,
-        value: "Todo"
+        value: "todo"
     }
 ]
 

@@ -1,4 +1,4 @@
-import { NoteProvider, ThemeProvider, UserProvider } from "contexts";
+import { FilterProvider, NoteProvider, ThemeProvider, UserProvider } from "contexts";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -11,6 +11,7 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <FilterProvider>
     <NoteProvider>
       <UserProvider>
         <ThemeProvider>
@@ -18,6 +19,7 @@ ReactDOM.render(
         </ThemeProvider>
       </UserProvider>
     </NoteProvider>
+    </FilterProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

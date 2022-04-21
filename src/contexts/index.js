@@ -1,6 +1,7 @@
 import { useTheme, ThemeProvider } from "./ThemeContext";
 import { useUserDetails, UserProvider } from "./UserContext";
 import { useNote, NoteProvider } from "./NoteContext";
+import { useFilter, FilterProvider } from "./filterContext";
 
 export {
     useTheme,
@@ -8,5 +9,7 @@ export {
     useUserDetails,
     UserProvider,
     useNote,
-    NoteProvider
+    NoteProvider,
+    useFilter,
+    FilterProvider
 }
