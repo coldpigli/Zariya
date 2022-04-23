@@ -1,15 +1,15 @@
 const priorityOptions = [
     {
         id: 1,
-        value: "High"
+        value: "high"
     },
     {
         id: 2,
-        value: "Medium"
+        value: "medium"
     },
     {
         id: 3,
-        value: "Low"
+        value: "low"
     },
 ]
 

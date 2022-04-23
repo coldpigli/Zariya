@@ -1,6 +1,7 @@
 import { handleLogin,validateInputs, handleSignup } from "./handleAuth";
 import toast from "./toast";
 import { addNote, editNote, deleteNote, archiveNote, unarchiveNote } from "./handleNote";
+import { sortByDate, sortByPriority, filterByLabel, getFilteredNotes  } from "./filterUtils";
 
 export {
     handleLogin,
@@ -11,5 +12,9 @@ export {
     deleteNote,
     toast,
     archiveNote,
-    unarchiveNote
+    unarchiveNote,
+    sortByDate,
+    sortByPriority,
+    filterByLabel,
+    getFilteredNotes
 }
