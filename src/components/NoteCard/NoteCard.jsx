@@ -1,22 +1,15 @@
 import styles from "./NoteCard.module.css";
 import DOMPurify from "dompurify";
 import { useNote, useUserDetails } from "contexts";
-import { archiveNote, deleteNote, toast } from "utils";
+import { archiveNote, deleteNote } from "utils";
 
 const NoteCard = ({note}) => {
 
   const {dispatchNote} = useNote();
   const {userState, dispatchUser} = useUserDetails();
-  const {pinnedNotes} = userState;
  
   const editNoteData = () => {
       dispatchNote({type: "EDIT_NOTE", payload: note})
-  }
-
-  const pinNote = () => {
-      pinnedNotes.find(item=>item._id===note._id) ? 
-      toast({type: "error", message: "Note already pinned"}) : 
-      dispatchUser({type: "ADD_PINNED_NOTE", payload: note})
   }
 
   return (
@@ -36,9 +29,6 @@ const NoteCard = ({note}) => {
               }
           </div>
           <div className={`${styles.noteActions} flex`}>
-              <div onClick={pinNote}>
-                <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>push_pin</span>
-              </div>
               <div onClick={()=>archiveNote(note, dispatchUser)}>
                 <span className={`material-icons md-24 ${styles.bottomCta} pointer`}>archive</span>
               </div>

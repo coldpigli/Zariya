@@ -23,6 +23,9 @@ const Trash = () => {
     <div className={`generic-page`}>
     <h1 className={`gap-d30`}>Trash</h1>
     <div className={`${styles.noteList} flex`}>
+      {
+        trash.length===0?<h1>Trash is empty</h1>:null
+      }
     {
       trash?.map((note)=>{
         return <div className={`${styles.noteContainer} flex-vertical`} style={{backgroundColor: note.color, color: "black"}}>
