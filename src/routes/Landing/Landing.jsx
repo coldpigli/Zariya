@@ -11,8 +11,13 @@ const Landing = () => {
 
   return (
     <div className={`generic-page`}>
-        <h1 className={`heading1`}>Zariya</h1>
-        <button className={`mono-btn ${theme==="dark-theme"?"light-fill":"dark-fill"}`} onClick={getStarted}>Get Started</button>
+      <div className={styles.heroContainer}>
+        <h1 className={styles.heroHeading}>Welcome to Zariya</h1>
+        <h3 className={styles.heroDescription}>Zariya is a minimal, no nonsense note-taking app.</h3>
+        <div className={styles.buttonContainer}>
+        <button className={`mono-btn ${theme==="dark-theme"?"light-fill":"dark-fill"} gap-u30`} onClick={getStarted}>Get Started</button>
+        </div>
+      </div> 
     </div>
   )
 }
