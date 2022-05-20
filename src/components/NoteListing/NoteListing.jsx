@@ -10,8 +10,7 @@ const NoteListing = () => {
     const {notes} = userState;
     const {filterState} = useFilter();
     const [filteredList, setFilteredList] = useState([])
-    console.log("filteredList", filteredList);
-
+  
     useEffect(()=>{
       const filtered = getFilteredNotes(filterState, notes);
       setFilteredList(filtered)
@@ -20,6 +19,12 @@ const NoteListing = () => {
   return (
     <div className={`flex-vertical`}>
       <h3>All Notes</h3>
+      {
+        filteredList.length===0?<div className='txt-center'>
+          <h1>You have no notes</h1>
+          <p>Add a note to pen down your thoughts</p>
+          </div>:null
+      }
       <div className={`${styles.noteList} flex`}>
         {
           filteredList?.map((note)=>{

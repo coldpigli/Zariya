@@ -11,6 +11,9 @@ const Archive = () => {
     <div className={`generic-page`}>
       <h1 className={`gap-d30`}>Archived Notes</h1>
       <div className={`${styles.noteList} flex`}>
+        {
+          archives.length===0?<h1>You dont have any archived notes</h1>:null
+        }
       {
         archives?.map((note)=>{
           return <div className={`${styles.noteContainer} flex-vertical`} style={{backgroundColor: note.color, color: "black"}}>
