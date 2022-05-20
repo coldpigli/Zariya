@@ -22,7 +22,7 @@ const NoteListing = () => {
       {
         filteredList.length===0?<div className='txt-center'>
           <h1>You have no notes</h1>
-          <p>Add a note to pen down yout thoughts</p>
+          <p>Add a note to pen down your thoughts</p>
           </div>:null
       }
       <div className={`${styles.noteList} flex`}>
